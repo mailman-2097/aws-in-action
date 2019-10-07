@@ -1,0 +1,73 @@
+ace-editor                         JavaScript GUI Lib: ACE Editor bundle plugin                     1.1
+ant                                Ant Plugin                                                       1.10
+antisamy-markup-formatter          OWASP Markup Formatter Plugin                                    1.6
+apache-httpcomponents-client-4-api Apache HttpComponents Client 4.x API Plugin                      4.5.10-1.0
+authentication-tokens              Authentication Tokens API Plugin                                 1.3
+bouncycastle-api                   bouncycastle API Plugin                                          2.17
+branch-api                         Branch API Plugin                                                2.5.4
+build-timeout                      Build Timeout                                                    1.19
+cloudbees-folder                   Folders Plugin                                                   6.9
+command-launcher                   Command Agent Launcher Plugin                                    1.3
+credentials                        Credentials Plugin                                               2.3.0
+credentials-binding                Credentials Binding Plugin                                       1.20
+display-url-api                    Display URL API                                                  2.3.2
+docker-commons                     Docker Commons Plugin                                            1.15
+docker-workflow                    Docker Pipeline                                                  1.19
+durable-task                       Durable Task Plugin                                              1.30
+email-ext                          Email Extension Plugin                                           2.66
+git                                Git plugin                                                       3.12.1
+git-client                         Git client plugin                                                2.8.6
+git-server                         GIT server Plugin                                                1.8
+github                             GitHub plugin                                                    1.29.4
+github-api                         GitHub API Plugin                                                1.95
+github-branch-source               GitHub Branch Source Plugin                                      2.5.7
+gradle                             Gradle Plugin                                                    1.34
+handlebars                         JavaScript GUI Lib: Handlebars bundle plugin                     1.1.1
+jackson2-api                       Jackson 2 API Plugin                                             2.9.9.1
+jdk-tool                           Oracle Java SE Development Kit Installer Plugin                  1.3
+jquery-detached                    JavaScript GUI Lib: jQuery bundles (jQuery and jQuery UI) plugin 1.2.1
+jsch                               JSch dependency plugin                                           0.1.55.1
+junit                              JUnit Plugin                                                     1.28
+ldap                               LDAP Plugin                                                      1.20
+lockable-resources                 Lockable Resources plugin                                        2.5
+mailer                             Mailer Plugin                                                    1.27
+mapdb-api                          MapDB API Plugin                                                 1.0.9.0
+matrix-auth                        Matrix Authorization Strategy Plugin                             2.4.2
+matrix-project                     Matrix Project Plugin                                            1.14
+momentjs                           JavaScript GUI Lib: Moment.js bundle plugin                      1.1.1
+pam-auth                           PAM Authentication plugin                                        1.5.1
+pipeline-build-step                Pipeline: Build Step                                             2.9
+pipeline-github-lib                Pipeline: GitHub Groovy Libraries                                1.0
+pipeline-graph-analysis            Pipeline Graph Analysis Plugin                                   1.10
+pipeline-input-step                Pipeline: Input Step                                             2.11
+pipeline-milestone-step            Pipeline: Milestone Step                                         1.3.1
+pipeline-model-api                 Pipeline: Model API                                              1.3.9
+pipeline-model-declarative-agent   Pipeline: Declarative Agent API                                  1.1.1
+pipeline-model-definition          Pipeline: Declarative                                            1.3.9
+pipeline-model-extensions          Pipeline: Declarative Extension Points API                       1.3.9
+pipeline-rest-api                  Pipeline: REST API Plugin                                        2.12
+pipeline-stage-step                Pipeline: Stage Step                                             2.3
+pipeline-stage-tags-metadata       Pipeline: Stage Tags Metadata                                    1.3.9
+pipeline-stage-view                Pipeline: Stage View Plugin                                      2.12
+plain-credentials                  Plain Credentials Plugin                                         1.5
+resource-disposer                  Resource Disposer Plugin                                         0.13
+scm-api                            SCM API Plugin                                                   2.6.3
+script-security                    Script Security Plugin                                           1.64
+ssh-credentials                    SSH Credentials Plugin                                           1.17.2
+ssh-slaves                         SSH Slaves plugin                                                1.30.2
+structs                            Structs Plugin                                                   1.20
+subversion                         Subversion Plug-in                                               2.12.2
+timestamper                        Timestamper                                                      1.10
+token-macro                        Token Macro Plugin                                               2.8
+workflow-aggregator                Pipeline                                                         2.6
+workflow-api                       Pipeline: API                                                    2.37
+workflow-basic-steps               Pipeline: Basic Steps                                            2.18
+workflow-cps                       Pipeline: Groovy                                                 2.74
+workflow-cps-global-lib            Pipeline: Shared Groovy Libraries                                2.15
+workflow-durable-task-step         Pipeline: Nodes and Processes                                    2.34
+workflow-job                       Pipeline: Job                                                    2.35
+workflow-multibranch               Pipeline: Multibranch                                            2.21
+workflow-scm-step                  Pipeline: SCM Step                                               2.9
+workflow-step-api                  Pipeline: Step API                                               2.20
+workflow-support                   Pipeline: Supporting APIs                                        3.3
+ws-cleanup                         Workspace Cleanup Plugin                                         0.37

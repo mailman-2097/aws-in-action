@@ -1,0 +1,22 @@
+[
+  {
+    "ParameterKey": "KeyName",
+    "ParameterValue": "mykey"
+  },
+  {
+    "ParameterKey": "InstanceType",
+    "ParameterValue": "t2.micro"
+  },
+	{
+    "ParameterKey": "VPC",
+    "ParameterValue": "vpc-a980c0d3"
+  },
+	{
+    "ParameterKey": "Subnet",
+    "ParameterValue": "subnet-f1f3c796"
+  },
+	{
+    "ParameterKey": "Lifetime",
+    "ParameterValue": "3"
+  }
+]

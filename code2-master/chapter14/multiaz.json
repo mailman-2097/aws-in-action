@@ -1,0 +1,10 @@
+[
+  {
+    "ParameterKey": "KeyName",
+    "ParameterValue": "mykey"
+  },
+	{
+    "ParameterKey": "JenkinsAdminPassword",
+    "ParameterValue": "123456"
+  }
+]

@@ -1,0 +1,84 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Conditions:
+  HasCreateCloudTrail:
+    Fn::Equals:
+    - Ref: CreateCloudTrail
+    - 'true'
+Description: Adding an owner tag to EC2 instances automatically
+Parameters:
+  CreateCloudTrail:
+    AllowedValues:
+    - 'true'
+    - 'false'
+    Default: 'true'
+    Description: Create CloudTrail (set to false if CloudTrail is already enabled
+      in your account).
+    Type: String
+Resources:
+  EC2OwnerTagFunction:
+    Properties:
+      CodeUri: s3://ec2-owner-tag-nishad2-awsadmin/bb98c2133e34657f44a6051c64a9f6ae
+      Events:
+        CloudTrail:
+          Properties:
+            Pattern:
+              detail:
+                eventName:
+                - RunInstances
+              detail-type:
+              - AWS API Call via CloudTrail
+              source:
+              - aws.ec2
+          Type: CloudWatchEvent
+      Handler: lambda_function.lambda_handler
+      Policies:
+      - Statement:
+        - Action: ec2:CreateTags
+          Effect: Allow
+          Resource: '*'
+        Version: '2012-10-17'
+      Runtime: python3.6
+    Type: AWS::Serverless::Function
+  Trail:
+    Condition: HasCreateCloudTrail
+    DependsOn: TrailBucketPolicy
+    Properties:
+      IsLogging: true
+      IsMultiRegionTrail: false
+      S3BucketName:
+        Ref: TrailBucket
+    Type: AWS::CloudTrail::Trail
+  TrailBucket:
+    Condition: HasCreateCloudTrail
+    DeletionPolicy: Retain
+    Properties:
+      BucketName:
+        Fn::Sub: ${AWS::StackName}-${AWS::AccountId}
+    Type: AWS::S3::Bucket
+  TrailBucketPolicy:
+    Condition: HasCreateCloudTrail
+    Properties:
+      Bucket:
+        Ref: TrailBucket
+      PolicyDocument:
+        Statement:
+        - Action: s3:GetBucketAcl
+          Effect: Allow
+          Principal:
+            Service: cloudtrail.amazonaws.com
+          Resource:
+            Fn::Sub: arn:aws:s3:::${TrailBucket}
+          Sid: AWSCloudTrailAclCheck
+        - Action: s3:PutObject
+          Condition:
+            StringEquals:
+              s3:x-amz-acl: bucket-owner-full-control
+          Effect: Allow
+          Principal:
+            Service: cloudtrail.amazonaws.com
+          Resource:
+            Fn::Sub: arn:aws:s3:::${TrailBucket}/AWSLogs/${AWS::AccountId}/*
+          Sid: AWSCloudTrailWrite
+        Version: '2012-10-17'
+    Type: AWS::S3::BucketPolicy
+Transform: AWS::Serverless-2016-10-31

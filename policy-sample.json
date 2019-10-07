@@ -1,0 +1,42 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                        "s3:GetBucketLocation",
+                        "s3:ListAllMyBuckets"
+                      ],
+            "Resource": "arn:aws:s3:::*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::servicensw*filebucket",
+                "arn:aws:s3:::servicensw*filebucket/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": "ec2:Describe*",
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/BusinessUnit": "org1"
+                },
+                "ForAllValues:StringEquals": {
+                    "aws:TagKeys": "BusinessUnit"
+                }
+            }
+        },
+        {
+            "Effect": "Deny",
+            "Action": [
+                "ec2:DeleteTags",
+                "ec2:CreateTags"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
